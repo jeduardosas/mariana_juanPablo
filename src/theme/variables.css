@@ -1,0 +1,11 @@
+:root{
+  --colorPrincipal:#4A90E2;
+  --colorTexto:#383333;
+  --colorFondo:#f2f4f7;
+  --colorSecundario:#2348eb;
+  --blanco:#fff;
+  --negro:#000;
+  --colorSombra:#acacac;
+  --fuentePrincipal:sans-serif;
+  --fuenteCursiva: 'Courier New', Courier, monospace;
+}
