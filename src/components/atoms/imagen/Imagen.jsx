@@ -21,7 +21,6 @@ const Imagen = ({ajustes}) => {
 
   }
   return (
-    <div className='imagen'>
       <img 
         src={imagen} 
         alt={`${nombreImagen(imagen)}-img`} 
@@ -30,7 +29,6 @@ const Imagen = ({ajustes}) => {
           height:alto || 'auto'
         }}
       />
-    </div>
   )
 }
 

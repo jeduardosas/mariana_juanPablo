@@ -1,11 +1,15 @@
 body{
   font-family: var(--fuentePrincipal);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color:var(--colorTexto);
   background-color:var(--colorFondo);
 }
+h1, h2, h3, h4, p{
+  margin:0;
+  font-weight: normal;
+}
 .contenedor{
-  width: 70%;
+  width: 90%;
   margin:0 auto;
 }

@@ -6,6 +6,8 @@
   --blanco:#fff;
   --negro:#000;
   --colorSombra:#acacac;
-  --fuentePrincipal:sans-serif;
-  --fuenteCursiva: 'Courier New', Courier, monospace;
+  --fuentePrincipal:"Lora", serif;
+  --fuenteCursiva:"Great Vibes", cursive;
+  --fuenteSecundaria:"Cinzel", serif;
+  --fuenteTerciaria:"Playfair Display", serif;
 }
