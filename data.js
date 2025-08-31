@@ -37,9 +37,9 @@ const datosComunes = {
   },
   timeLine:{
     settings:{
-      bgColor:'',
-      color:'',
-      lineColor:'',
+      bgColor:'#fff',
+      color:'#000',
+      lineColor:'#000',
     },
     protocol:[
       {
@@ -59,7 +59,7 @@ const datosComunes = {
         id:3,
         time:'20:00 Hrs.',
         name:'Ceremonia Civil',
-        icon:''
+        icon:'votos'
       },
       {
         id:4,
@@ -72,13 +72,13 @@ const datosComunes = {
         id:5,
         time:'22:00 Hrs.',
         name:'Protocolo',
-        icon:'protocolo',
+        icon:'brindis',
       },
       {
         id:6,
         time:'22:30 Hrs.',
         name:'Fiesta',
-        icon:'baile',
+        icon:'musica',
       },
       {
         id:7,
@@ -139,8 +139,8 @@ const tipoevento={
       madrina:'',
     },
     confirmacion:{
-      novio:'',
-      novia:''
+      novio:'7331270875',
+      novia:'7331141835'
     },
   },
   

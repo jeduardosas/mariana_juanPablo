@@ -3,7 +3,7 @@
 }
 /* C O L O  R E S   P A R A   F O N D O */
 .bgPrincipal{
-  background-color: var(--colorPrimario);
+  background-color: var(--colorPrincipal);
 }
 .bgSecundario{
   background-color: var(--colorSecundario);

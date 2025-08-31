@@ -1,3 +1,11 @@
+/*HEADER*/
+.header-contenedor{
+  width:100%;
+  height: 100vh;
+  background-image: url('./img/header.webp');
+  background-size: cover;
+  background-position: center;
+}
 /*TAJETA PARA EL MONOGRAMA*/
 .card-monograma-img{
   width:100%;
@@ -25,6 +33,13 @@
   font-size: 40px;
 }
 
+.card-monograma-fecha{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:5px;
+}
+
 /*CARD PARA NOMBRE DE LOS PAPÁS*/
 
 .card-papas p{
@@ -37,8 +52,115 @@
   width: 100%;
   margin: 30px 0;
   display:flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items:center;
+  gap:25px;
+}
+.card-papas-nombres{
+  display:flex;
+  flex-direction: column;
+  align-items: start;
+  gap:5px;
 }
 .card-papas-papas h3{
-  font-size: 16px;
+  font-size: 18px;
+  font-family: var(--fuenteTerciaria);
+}
+
+/*CARD PARA HORARIOS Y UBICACIONES*/
+.card-horarios-titulo{
+  text-align:center;
+  font-family:var(--fuenteCursiva);
+  font-size: 28px;
+}
+.card-horarios-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.card-horarios-item h2{
+  font-size:16px;
+  font-family:var(--fuenteTerciaria);
+  font-weight:bold;
+}
+.card-horarios-direccion{
+  width:100%;
+}
+.card-horarios-direccion p{
+  text-align:center;
+  font-family:var(--fuenteSecundaria);
+  color:#acacac;
+  font-size:14px;
+}
+.card-horarios-direccion h3{
+  margin-top:10px;
+  text-align:center;
+  font-family:var(--fuenteSecundaria);
+  font-size:22px;
+}
+.card-horarios-boton{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  
+}
+
+/*Reservado de Lugares*/
+.lugares-contenedor{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.lugares-contenedor h3{
+  font-family: var(--fuenteSecundaria);
+  font-size: 30px;
+  font-weight: bold;
+}
+.lugares-contenedor span{
+  font-size:100px;
+  font-weight: bold;
+}
+.lugares-contenedor p{
+  font-family: var(--fuenteSecundaria);
+  color:#acacac;
+  font-size: 25px;
+  font-style: italic;
+}
+
+/*CARD PARA LA CONFIRMACION DE ASISTENCIA*/
+.card-confirmacion-contenedor{
+  width:100%;
+}
+.card-confirmacion-titulo{
+  text-align:center;
+  font-family:var(--fuenteCursiva);
+  color:#acacac;
+  font-size:30px;
+}
+.card-cofirmacin-texto{
+  text-align:center;
+  margin-top:20px;
+  font-size:18px;
+  line-height: 1;
+}
+.card-confirmacion-botones{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  margin-top:30px;
+}
+.card-confirmacion-item{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+.card-confirmacion-item div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:5px;
 }

@@ -16,13 +16,13 @@ import './botonStyle.css';
       }
     }} /> */
 const Boton = ({ajustes}) => {
-  const { texto,estilos } = ajustes || {};
+  
+  const { texto,estilos, link } = ajustes || {};
   const { colorFondo, forma, sombra, textBold, textColor } = estilos || {};
   const { arribaIzquierda, arribaDerecha, abajoIzquierda, abajoDerecha } = forma || {};
-
+  console.log('ESTO ES EL LINK',link)
   const clases = [
     'atom-boton',
-    colorFondo ? `bg${colorFondo}` : '',
     arribaIzquierda ? 'redondoArribaIzquierda' : '',
     arribaDerecha ? 'redondoArribaDerecha' : '',
     abajoIzquierda ? 'redondoAbajoIzquierda' : '',
@@ -32,7 +32,11 @@ const Boton = ({ajustes}) => {
     textColor ? `text${textColor}` : ''
   ].join(' ')
   return (
-    <button className={clases}>{ texto }</button>
+    <a 
+      href={link}
+      style={{backgroundColor:`${colorFondo}`}}
+      className={clases}
+    >{texto}</a>
   )
 }
 

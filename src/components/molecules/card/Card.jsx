@@ -1,11 +1,12 @@
 import './cardStyle.css'
 
-const Card = ({ajustes, children }) => {
-  const { ancho, variante,clase } = ajustes || {};
+const Card = ({ tipo, ajustes, children }) => {
+  const { type, titulo, cuerpo, final, imagen } = tipo || {};
+  const { ancho, variante } = ajustes || {};
 
   return (
     <div 
-      className={`card  ${variante ? `card-${variante} ${clase}` : ''}`} 
+      className={`card  ${variante ? `card-${variante}` : ''}`} 
       style={{ width: ancho || '100%' }}
     >
       {children}
