@@ -3,8 +3,8 @@
 }
 
 @media (min-width: 768px) {
-    .modal-tittle-2 div img{
-      width:30%;
+    .modal-imagen-contenedor img{
+      width:25% !important;
     }
 }
 .modal-tittle-2 p{

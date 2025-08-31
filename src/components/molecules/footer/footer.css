@@ -32,3 +32,28 @@
   color:#aaa;
   margin-top: 10px;
 }
+
+
+/*ANIMACION DEL CORAZON*/
+.heart {
+  font-size: 12px;        /* tamaño del corazón */
+  color: crimson;         /* color del corazón */
+  display: inline-block;
+  animation: beat 4s infinite;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+}
+

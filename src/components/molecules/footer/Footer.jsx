@@ -5,8 +5,8 @@ const Footer = ( )=>{
   const year = new Date().getFullYear();
   return(
     <footer className="footer">
-      <Imagen ajustes={{imagen:'./img/logo_footer.webp', ancho:'60px', clase:'footer-logo'}} />
-      <p className='footer-text'>Hecha con cariño <span>Monadas Invitaciones</span></p>
+      <a target='_blank' href="https://www.facebook.com/monadas.invitaciones"><Imagen ajustes={{imagen:'./img/logo_footer.webp', ancho:'60px', clase:'footer-logo'}} /></a>
+      <p className='footer-text'>Hecha con cariño <span>Monadas Invitaciones</span><div class="heart">❤</div></p>
 
       <div className="footer-line"></div>
 

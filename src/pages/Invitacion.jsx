@@ -20,7 +20,7 @@ import '../styles/invitacion.css';
 
 const Invitacion = () => {
   const data = getData('boda');
-  console.log(data);
+  
 
   const son = './music/song.mp3'
 

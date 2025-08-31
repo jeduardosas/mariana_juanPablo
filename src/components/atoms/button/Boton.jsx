@@ -20,7 +20,7 @@ const Boton = ({ajustes}) => {
   const { texto,estilos, link } = ajustes || {};
   const { colorFondo, forma, sombra, textBold, textColor } = estilos || {};
   const { arribaIzquierda, arribaDerecha, abajoIzquierda, abajoDerecha } = forma || {};
-  console.log('ESTO ES EL LINK',link)
+  
   const clases = [
     'atom-boton',
     arribaIzquierda ? 'redondoArribaIzquierda' : '',
