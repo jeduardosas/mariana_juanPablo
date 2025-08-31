@@ -10,6 +10,7 @@ import Detalles from '../components/molecules/detalles/Detalles.jsx';
 import Imagen from '../components/atoms/imagen/Imagen.jsx';
 import Icono from '../components/atoms/iconos/Icono.jsx';
 import Boton from '../components/atoms/button/Boton.jsx';
+import Footer from '../components/molecules/footer/Footer.jsx';
 import {Iglesia, Recepcion, Novia, Novio} from '../components/atoms/iconos/Index.jsx';
 import getData from '../../data.js';
 import obtnerTextoConfirmacion from '../functions/obtenerTextoConfirmacion.js'
@@ -242,7 +243,7 @@ const Invitacion = () => {
           </div>
 
           <div className="contenedor">
-            <Card ajustes={{ancho:'90%', variante:'papel', clase:'card-confirmacion'}}>
+            <AnimarTarjeta ajustes={{ancho:'90%', variante:'papel', clase:'card-confirmacion'}}>
               <div className="card-confirmacion-contenedor">
                 <h2 className='card-confirmacion-titulo'>Confirmación de Asistencia</h2>
                 <p className='card-cofirmacin-texto'>Tu compañia es lo más importante para nosotros. Confirmanos si estaras ahí para hacer este momento inolvidable</p>
@@ -292,8 +293,41 @@ const Invitacion = () => {
                   </div>
                 </div>
               </div>
-            </Card>
+            </AnimarTarjeta>
           </div>
+
+          <div className='contenedor'>
+            <AnimarTarjeta 
+              ajustes={
+                {
+                  ancho:'90%', 
+                  variante:'papel', 
+                  clase:'card-hospedaje'
+                }
+              }>
+              <h2 className='card-hospedaje-titulo'>Sugerencia de Hospedaje</h2>
+              
+                <p className='card-hospedaje-texto'>Con el deseo de facilitar su estancia ponemos a su disposición un código de descuento en <span>Hotel Grand Plaza.</span></p> 
+                <p className='card-hospedaje-texto'>Al realizar su reservación utilize el codigo:</p>
+                <p className="card-hospedaje-texto"><span>Mariana & Juan Pablo</span></p>
+                <p className='card-hospedaje-texto'>para obtener una tarifa preferencial. </p>
+              <Boton ajustes={{
+                texto:'Ver Ubicación',
+                link:'https://maps.app.goo.gl/TdzcfGT8mvkLdB468',
+                estilos:{
+                  colorFondo:'#f1eeee',
+                  forma:{
+                    arribaIzquierda:true,
+                    arribaDerecha:true,
+                    abajoIzquierda:true,
+                    abajoDerecha:true
+                  }
+                }
+              }} />
+            </AnimarTarjeta>
+          </div>
+
+          <Footer />
 
         </>
       )

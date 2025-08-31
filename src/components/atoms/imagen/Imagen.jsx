@@ -13,7 +13,7 @@ Asi se renderiza una imagen
  */
 
 const Imagen = ({ajustes}) => {
-  const { imagen, ancho, alto } = ajustes || {}
+  const { imagen, ancho, alto, clase } = ajustes || {}
 
   const nombreImagen = (img)=>{
     const nombre = img.split('/').pop().split('.')[0];
@@ -24,6 +24,7 @@ const Imagen = ({ajustes}) => {
       <img 
         src={imagen} 
         alt={`${nombreImagen(imagen)}-img`} 
+        className={clase}
         style={{
           width:ancho || '100%',
           height:alto || 'auto'
