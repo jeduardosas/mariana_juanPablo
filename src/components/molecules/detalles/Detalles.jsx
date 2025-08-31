@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Card from '../card/Card.jsx';
+import Imagen from '../../atoms/imagen/Imagen.jsx';
 import './detalles.css';
 
 const Detalles = ()=>{
@@ -10,7 +11,9 @@ const Detalles = ()=>{
   return(
     <div className="detalles-container">
       <Card ajustes={{ variante: "papel", ancho: "90%", clase:'card-detalles' }}>
-        <h2 className="detalles-titulo">Detalles</h2>
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center',marginBottom:'30px'}}>
+          <Imagen ajustes={{imagen:'./img/detalles.webp', ancho:'50%'}} />
+        </div>
         <button 
           className="detalles-boton" 
           onClick={toggleDetalles}

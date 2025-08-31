@@ -4,8 +4,8 @@ import './footer.css';
 const Footer = ( )=>{
   const year = new Date().getFullYear();
   return(
-    <Footer className='footer'>
-      <Imagen ajustes={{imagen:'./img/logo_footer.webp', ancho:'50%', clase:'footer-logo'}} />
+    <footer className="footer">
+      <Imagen ajustes={{imagen:'./img/logo_footer.webp', ancho:'60px', clase:'footer-logo'}} />
       <p className='footer-text'>Hecha con cariño <span>Monadas Invitaciones</span></p>
 
       <div className="footer-line"></div>
@@ -13,8 +13,7 @@ const Footer = ( )=>{
       <span className="footer-copy">
         Todos los Derechos Reservados {year}
       </span>
-
-    </Footer>
+    </footer>
   )
 }
 

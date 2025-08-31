@@ -13,11 +13,16 @@
   align-items: center;
   justify-content:center;  
 }
+.card-monograma-img-nombres{
+  margin-top:30px;
+  width:100%;
+}
 .card-monograma-texto{
+  width:100%;
   margin-top: 30px;
-  width:75%;
 }
 .card-monograma-texto p{
+  text-align:center;
   font-style: italic;
   font-family: var(--fuenteTerciaria);
   color:#acacac
@@ -34,19 +39,27 @@
 }
 
 .card-monograma-fecha{
+  margin-top:30px;
   width:100%;
   display:flex;
   justify-content:center;
+  align-items:center;
   gap:5px;
+  color:var(--colorPrincipal)
+}
+.card-monograma-fecha span{
+  font-size:10px;
 }
 
 /*CARD PARA NOMBRE DE LOS PAPÁS*/
 
 .card-papas p{
+  text-align:center;
+  font-size:18px;
   margin-top: 30px;
   font-style: italic;
-  font-family: var(--fuenteTerciaria);
   color: #acacac;
+  font-family: var(--fuenteTerciaria);
 }
 .card-papas-papas{
   width: 100%;
@@ -54,17 +67,37 @@
   display:flex;
   flex-direction: column;
   align-items:center;
+  justify-content: center;
   gap:25px;
 }
 .card-papas-nombres{
   display:flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap:5px;
 }
 .card-papas-papas h3{
   font-size: 18px;
   font-family: var(--fuenteTerciaria);
+}
+.frase-contenedor{
+  width:100%;
+  margin: 40px 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+.frase-contenedor p{
+  width:60%;
+  font-family:var(--fuenteTerciaria);
+  font-style:italic;
+  font-size:16px;
+}
+.frase-contenedor{
+  font-style:italic;
+  font-family:var(--fuenteTerciaria);
+  font-size:16px;
 }
 
 /*CARD PARA HORARIOS Y UBICACIONES*/
@@ -72,6 +105,7 @@
   text-align:center;
   font-family:var(--fuenteCursiva);
   font-size: 28px;
+  color:var(--colorPrincipal)
 }
 .card-horarios-item{
   display:flex;
@@ -121,9 +155,11 @@
 .lugares-contenedor span{
   font-size:100px;
   font-weight: bold;
+  font-family:var(--fuenteSecundaria);
 }
 .lugares-contenedor p{
-  font-family: var(--fuenteSecundaria);
+  margin-top:-30px;
+  font-family: var(--fuenteTerciaria);
   color:#acacac;
   font-size: 25px;
   font-style: italic;
@@ -136,14 +172,14 @@
 .card-confirmacion-titulo{
   text-align:center;
   font-family:var(--fuenteCursiva);
-  color:#acacac;
   font-size:30px;
+  color:var(--colorPrincipal)
 }
 .card-cofirmacin-texto{
   text-align:center;
   margin-top:20px;
-  font-size:18px;
-  line-height: 1;
+  font-size:16px;
+  line-height: 1.3;
 }
 .card-confirmacion-botones{
   width:100%;
@@ -170,7 +206,7 @@
   text-align:center;
   font-family:var(--fuenteCursiva);
   font-size:28px;
-  color:#acacac;
+  color:var(--colorPrincipal)
 }
 .card-hospedaje-texto{
   text-align:center;

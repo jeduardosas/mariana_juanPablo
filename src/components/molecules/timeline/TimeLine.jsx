@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Icono from '../../atoms/iconos/Icono.jsx';
+import Imagen from '../../atoms/imagen/Imagen.jsx';
 import {Banda, Iglesia, Recepcion, Comida, Brindis, Musica, Votos, Fin } from '../../atoms/iconos/Index.jsx';
 import './Timeline.css';
 
@@ -103,7 +104,9 @@ const TimeLineItem = ({ event, index, isVisible, lineColor, timeLine, eventFontF
 
 const TimeLine = ({ 
   timeLine, 
+  tituloImagen,
   titulo,
+  anchoImagen,
   lineColor = "#acacac", 
   eventFontFamily = "inherit", 
   timeFontFamily = "inherit",
@@ -150,7 +153,7 @@ const TimeLine = ({
 
   return (
     <>
-      <p className='timeline-titulo'>{titulo}</p>
+      {tituloImagen ? <div style={{display:'flex',justifyContent:'center', alignItems:'center'}}><Imagen ajustes={{imagen:titulo,ancho:anchoImagen }} /></div>  :<p className='timeline-titulo'>{titulo}</p>}
       <div className="timeline-container" ref={timelineRef}>
       
         <div 

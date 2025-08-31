@@ -20,11 +20,10 @@
 }
 
 .modal-button{
-  background-color:var(--color_text);
+  background-color:var(--colorFondo);
   padding: 10px 15px;
   font-size: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 10px;
   color:var(--back-color);
   cursor:pointer;
 }

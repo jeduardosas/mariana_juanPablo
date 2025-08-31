@@ -8,6 +8,7 @@ import Contador from '../components/molecules/contador/Contador.jsx';
 import TimeLine from '../components/molecules/timeline/TimeLine.jsx';
 import Detalles from '../components/molecules/detalles/Detalles.jsx';
 import Imagen from '../components/atoms/imagen/Imagen.jsx';
+import Banner from '../components/molecules/banner/Banner.jsx';
 import Icono from '../components/atoms/iconos/Icono.jsx';
 import Boton from '../components/atoms/button/Boton.jsx';
 import Footer from '../components/molecules/footer/Footer.jsx';
@@ -21,7 +22,7 @@ const Invitacion = () => {
   const data = getData('boda');
   console.log(data);
 
-  const son = './music/song1.mp3'
+  const son = './music/song.mp3'
 
   const [play,setPlay] = useState(false); //estado para manejar la reproduccion del audio
   const [modalIsOpen, setModalIsopen] = useState(true);//estado para manejar el modal
@@ -32,7 +33,7 @@ const Invitacion = () => {
   const pasesParam = params.get("pases");
 
   const pases = Number(pasesParam); // lo convertimos a número
-  let txt1 = "lugar";
+  let txt1 = "Lugar";
   let txt2 = "reservado";
 
   // Si pasesParam es null, no es un número, no es entero o está fuera de rango -> redirigir
@@ -46,7 +47,7 @@ const Invitacion = () => {
   }
 
   if (pases > 1) {
-    txt1 = "lugares";
+    txt1 = "Lugares";
     txt2 = "reservados";
   }
 
@@ -79,9 +80,9 @@ const Invitacion = () => {
       ariaHideApp={false} //necesario para evitar adverterncias en pruebas yu desarrollo
       shouldCloseOnOverlayClick={false}
     >
-      <h2 className="modal-tittle-2">
-          
-      </h2>
+      <div className = 'modal-imagen-contenedor'>
+        <Imagen ajustes={{imagen:'./img/modal.webp',ancho:'70%'}} />
+      </div>
       <p className="modal-content">Para una mejor experiencia, por favor acepta la reproducción automática.</p>  
       <button className="modal-button" onClick={handlePlay}>Aceptar</button>
       
@@ -94,7 +95,7 @@ const Invitacion = () => {
           <Reproductor song={son} />
 
           <div className="header-contenedor">
-            {/* <Imagen ajustes={{imagen:'./img/header.webp', ancho:'100%'}} /> */}
+            
           </div>
           <div className='contenedor'>
             <AnimarTarjeta ajustes = {{ancho:'85%',variante:'papel',clase:'card-monograma'}}>
@@ -102,14 +103,12 @@ const Invitacion = () => {
                 <Imagen ajustes={{imagen:'./img/monograma.webp',ancho:'30%'}} />
               </div>
         
-              <div className="card-monograma-nombres">
-                <h1>{data.nombreNovia}</h1>
-                <p>&</p>
-                <h1>{data.nombreNovio}</h1>
+              <div className='card-monograma-img-nombres'>
+                <Imagen ajustes={{imagen:'./img/nombres.webp', ancho:'100%'}}  />
               </div>
 
               <div className="card-monograma-texto">
-                <p>Será un honor que nos acompañen a la celebración de nuestra boda el día:</p>
+                <p>Tenemos el honor de invitarles a celebrar el inicio de nuestra vida juntos.</p>
               </div>
 
               <div className="card-monograma-fecha">
@@ -122,11 +121,12 @@ const Invitacion = () => {
             </AnimarTarjeta>
 
           </div>
-    
+          
+          <Banner ajustes={{imagen:'./img/foto1.webp', anchoImagen:'100%',anchoContenedor:'100%'}} />
           <div className="contenedor">
 
             <AnimarTarjeta ajustes={{ancho:'90%',variante:'papel', clase:'card-papas'}}>
-                <p>En compañia de nuestros padres</p>
+                <p>En compañia de Dios y con las bendición de nuestros padres:</p>
 
                 <div className='card-papas-papas'>
 
@@ -143,6 +143,13 @@ const Invitacion = () => {
                 </div>
             </AnimarTarjeta>
 
+          </div>
+
+          <Banner ajustes={{imagen:'./img/ilustracion.webp', anchoImagen:'90%', anchoContenedor:'100%'}} />
+
+          <div className="frase-contenedor">
+            <p>"Y ahora permanecen la fé, la esperanza y el amor, estos tres; pero el mayor de ellos es el Amor."</p>
+            <span>-1 Corintios 13:13</span>
           </div>
 
           <div className="contenedor">
@@ -163,7 +170,7 @@ const Invitacion = () => {
                     { texto:'Cómo llegar',
                       link:`${data.religiosa.ubicacion}`, 
                       estilos:{
-                        colorFondo:'#f1eeee',
+                        colorFondo:'var(--colorFondo)',
                         forma:{
                           
                           arribaIzquierda:true,
@@ -195,7 +202,7 @@ const Invitacion = () => {
                     { texto:'Cómo llegar',
                       link:`${data.recepcion.ubicacion}`, 
                       estilos:{
-                        colorFondo:'#f1eeee',
+                        colorFondo:'var(--colorFondo)',
                         forma:{
                           
                           arribaIzquierda:true,
@@ -222,16 +229,22 @@ const Invitacion = () => {
             hora={data.religiosa.hora}
             minutos={data.religiosa.minutos}
           />
+
+          <Banner ajustes={{imagen:'./img/foto2.webp', anchoImagen:'100%',anchoContenedor:'100%'}} />
           <div className="contenedor">
             <Card ajustes={{ancho:'90%', variante:'papel', clase:'card-timeline'}}>
               <TimeLine 
                 timeLine={data.timeLine}
-                titulo={'Protocolo'}
+                tituloImagen={true}
+                titulo={'./img/itinerario.webp'}
+                anchoImagen={'50%'}
                 eventFontFamily={'var(--fuenteSecundaria'}
                 timeFontFamily={'var(--fuenteSecundaria)'}
               />
             </Card>
           </div>
+
+          <Banner ajustes={{imagen:'./img/foto3.webp',anchoImagen:'100%',anchoContenedor:'100%'}} />
 
           <div className="contenedor">
             <Detalles />
@@ -246,7 +259,7 @@ const Invitacion = () => {
             <AnimarTarjeta ajustes={{ancho:'90%', variante:'papel', clase:'card-confirmacion'}}>
               <div className="card-confirmacion-contenedor">
                 <h2 className='card-confirmacion-titulo'>Confirmación de Asistencia</h2>
-                <p className='card-cofirmacin-texto'>Tu compañia es lo más importante para nosotros. Confirmanos si estaras ahí para hacer este momento inolvidable</p>
+                <p className='card-cofirmacin-texto'>Tu compañia es lo más importante para nosotros.Agradecemos confirmar su asistencia para compartir juntos este día tan especial.</p>
                 <div className="card-confirmacion-botones">
                   <div className='card-confirmacion-item'>
                     <div>
@@ -258,7 +271,7 @@ const Invitacion = () => {
                         texto:'Confirmar',
                         link:obtnerTextoConfirmacion('boda', data.nombreNovio, data.nombreNovia,data.confirmacion.novio),
                         estilos:{
-                          colorFondo:'#f1eeee',
+                          colorFondo:'var(--colorFondo)',
                           forma:{
                             arribaIzquierda:true,
                             arribaDerecha:true,
@@ -280,7 +293,7 @@ const Invitacion = () => {
                         texto:'Confirmar',
                         link:obtnerTextoConfirmacion('boda', data.nombreNovio, data.nombreNovia,data.confirmacion.novio),
                         estilos:{
-                          colorFondo:'#f1eeee',
+                          colorFondo:'var(--colorFondo)',
                           forma:{
                             arribaIzquierda:true,
                             arribaDerecha:true,
@@ -295,7 +308,7 @@ const Invitacion = () => {
               </div>
             </AnimarTarjeta>
           </div>
-
+          <Banner ajustes={{imagen:'./img/foto4.webp', anchoImagen:'100%',anchoContenedor:'100%'}} />
           <div className='contenedor'>
             <AnimarTarjeta 
               ajustes={
@@ -315,7 +328,7 @@ const Invitacion = () => {
                 texto:'Ver Ubicación',
                 link:'https://maps.app.goo.gl/TdzcfGT8mvkLdB468',
                 estilos:{
-                  colorFondo:'#f1eeee',
+                  colorFondo:'var(--colorFondo)',
                   forma:{
                     arribaIzquierda:true,
                     arribaDerecha:true,
@@ -326,9 +339,8 @@ const Invitacion = () => {
               }} />
             </AnimarTarjeta>
           </div>
-
+          
           <Footer />
-
         </>
       )
     }
