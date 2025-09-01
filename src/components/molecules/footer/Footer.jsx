@@ -6,7 +6,10 @@ const Footer = ( )=>{
   return(
     <footer className="footer">
       <a target='_blank' href="https://www.facebook.com/monadas.invitaciones"><Imagen ajustes={{imagen:'./img/logo_footer.webp', ancho:'60px', clase:'footer-logo'}} /></a>
-      <p className='footer-text'>Hecha con cariño <span>Monadas Invitaciones</span><div class="heart">❤</div></p>
+      <div className='footer-titulo'>
+        <p className='footer-text'>Hecha con cariño <span>Monadas Invitaciones</span>.</p>
+        <div class="heart"><p> ❤ </p></div>
+      </div>
 
       <div className="footer-line"></div>
 

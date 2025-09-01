@@ -45,10 +45,9 @@
   }
   @media (min-width: 768px) {
       .contador-contenedor{
-        grid-row: 2/2;
+        width: 60%;
       }
       .contador{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        
       }
   }

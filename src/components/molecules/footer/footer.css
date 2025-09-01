@@ -1,6 +1,9 @@
 .footer{
   
   color:#666;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   padding:40px 20px;
   margin-top: 60px;
   text-align: center;
@@ -35,9 +38,13 @@
 
 
 /*ANIMACION DEL CORAZON*/
-.heart {
+.footer-titulo{
+  display: flex;
+  gap: 5px;
+}
+.heart p {
   font-size: 12px;        /* tamaño del corazón */
-  color: crimson;         /* color del corazón */
+  color: #ed93aa;         /* color del corazón */
   display: inline-block;
   animation: beat 4s infinite;
 }

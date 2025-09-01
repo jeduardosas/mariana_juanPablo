@@ -5,10 +5,10 @@ const NotFound = () => {
   return (
     <>
       <div className='not-found'>
-      <p>Ups!</p>
-      <p>Página No encontrada</p>
-      <p>Revisa el Link de tu Invitacion</p>
-    </div>
+        <p>¡Ups!</p>
+        <p>Página No encontrada</p>
+        <p>Revisa el Link de tu Invitación</p>
+      </div>
     <Footer />
     </>
   )
